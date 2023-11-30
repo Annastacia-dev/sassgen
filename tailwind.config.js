@@ -16,10 +16,11 @@ module.exports = {
         secondary: '#F87E49',
         secondaryDark: '#EE6842',
       },
-      fontFamily:{
+      fontFamily: {
         sans: ['Inter', 'sans-serif'],
         hedvig: ['Hedvig Letters Sans', 'sans-serif'],
-      }
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],
