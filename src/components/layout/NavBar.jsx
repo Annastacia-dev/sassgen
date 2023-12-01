@@ -8,7 +8,7 @@ const NavBar = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="border-b border-gray-500 sm:px-44 px-4 py-6 text-white z-10">
+    <nav className="border-b border-gray-600 sm:px-44 px-4 py-6 text-white z-10">
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <img src={logo} alt="logo" className="w-6" />
@@ -19,10 +19,18 @@ const NavBar = () => {
         </div>
         <div className="hidden sm:flex gap-8">
           <ul className="flex items-center space-x-12 text-gray-300 text-sm capitalize">
-            <li className="hover:text-secondary cursor-pointer">feature</li>
-            <li className="hover:text-secondary cursor-pointer">instruction</li>
-            <li className="hover:text-secondary cursor-pointer">process</li>
-            <li className="hover:text-secondary cursor-pointer">feedback</li>
+            <li className="hover:text-secondary cursor-pointer">
+              <a>feature</a>
+            </li>
+            <li className="hover:text-secondary cursor-pointer">
+              <a>instruction</a>
+            </li>
+            <li className="hover:text-secondary cursor-pointer">
+              <a>process</a>
+            </li>
+            <li className="hover:text-secondary cursor-pointer">
+              <a>feedback</a>
+            </li>
           </ul>
 
           <div className="flex items-center">
@@ -32,7 +40,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-        <MobileMenu isOpen={isOpen} toggle={toggle} />
+      <MobileMenu isOpen={isOpen} toggle={toggle} />
     </nav>
   );
 };

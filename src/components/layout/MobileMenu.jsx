@@ -9,10 +9,18 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <div className="absolute right-16 top-6 scale-150">
             <RiCloseLine onClick={toggle} />
           </div>
-          <li className="hover:text-secondary cursor-pointer">feature</li>
-          <li className="hover:text-secondary cursor-pointer">instruction</li>
-          <li className="hover:text-secondary cursor-pointer">process</li>
-          <li className="hover:text-secondary cursor-pointer">feedback</li>
+          <li className="hover:text-secondary cursor-pointer">
+            <a>feature</a>
+          </li>
+          <li className="hover:text-secondary cursor-pointer">
+            <a>instruction</a>
+          </li>
+          <li className="hover:text-secondary cursor-pointer">
+            <a>process</a>
+          </li>
+          <li className="hover:text-secondary cursor-pointer">
+            <a>feedback</a>
+          </li>
         </ul>
       )}
     </div>
