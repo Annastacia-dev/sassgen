@@ -24,7 +24,7 @@ const Socials = () => {
           <a
             key={index}
             href={link}
-            className="bg-primary/10 rounded-full w-8 h-8 flex justify-center items-center"
+            className="bg-primary/10 rounded-full w-8 h-8 flex justify-center items-center cursor-pointer transition-all hover:bg-primary"
           >
             {icon}
           </a>
