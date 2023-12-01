@@ -17,6 +17,14 @@ const socials = [
 ];
 
 const Socials = () => {
+  const handleScrollDown = () => {
+    window.scroll({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
+
   return (
     <div className="absolute sm:left-20 left-8 top-48">
       <div className="flex flex-col gap-6">
@@ -30,7 +38,7 @@ const Socials = () => {
           </a>
         ))}
       </div>
-      <div>
+      <div className="cursor-pointer" onClick={handleScrollDown}>
         <p className="text-white text-sm -rotate-90 uppercase tracking-wider -ml-10 mt-28">
           scroll down
         </p>
