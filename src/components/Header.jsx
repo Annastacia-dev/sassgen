@@ -14,7 +14,7 @@ const Header = () => {
         <div className="h-full text-white absolute  top-16 w-full flex justify-center items-start">
           <div className="bg-gradient-pattern sm:w-[26rem] w-64 sm:h-40 h-40"></div>
         </div>
-        <div className="flex flex-col justify-center items-center space-y-4 sm:mt-12 xs:mt-10 mt-2">
+        <div className="flex flex-col justify-center items-center space-y-4 sm:mt-12 xs:mt-40 mt-2">
           <h1 className="sm:text-7xl xs:text-5xl text-xl font-bold w-8/12 xs:leading-[60px] sm:text-center sm:ml-0 xs:ml-16 ml-4">
             Conduct more customer in a better way
           </h1>
