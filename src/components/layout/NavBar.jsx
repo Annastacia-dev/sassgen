@@ -14,7 +14,7 @@ const NavBar = () => {
           <img src={logo} alt="logo" className="w-6" />
           <p className="text-md font-bold tracking-wider">SassGen</p>
         </div>
-        <div className="absolute right-16 md:hidden top-6 scale-150">
+        <div className="absolute right-16 lg:hidden top-6 scale-150">
           <RiMenuFill onClick={toggle} />
         </div>
         <div className="hidden sm:flex gap-8">
