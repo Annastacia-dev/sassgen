@@ -26,7 +26,7 @@ const Socials = () => {
   };
 
   return (
-    <div className="absolute sm:left-20 xs:left-8 left-2 top-48">
+    <div className="absolute sm:left-12 xs:left-8 left-2 top-48">
       <div className="flex flex-col gap-6">
         {socials.map(({ icon, link }, index) => (
           <a
