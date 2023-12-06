@@ -23,7 +23,7 @@ const DemoSideBar = ({ activeTab, setActiveTab}) => {
   ];
 
   return (
-    <div className="bg-white w-28 sm:h-[30rem] xs:h-40 h-28 absolute top-0 border-t border-gray-300 z-16">
+    <div className="bg-white w-28 sm:h-[33rem] xs:h-40 h-28 absolute top-0 border-t border-gray-300 z-16">
       <div className="bg-white sm:w-32 w-24 sm:h-32 h-24 absolute sm:-left-36 -left-8 rotate-45 sm:top-0 -top-[120px] rounded-xl shadow transition-all">
         <div className="sm:h-3 h-2 sm:w-3 w-2 rounded-full bg-secondary absolute sm:top-4 top-2 sm:left-8 left-3"></div>
         <p className="sm:text-3xl text-xl font-bold text-black absolute sm:top-12 top-10 sm:left-5 left-4 -rotate-90">

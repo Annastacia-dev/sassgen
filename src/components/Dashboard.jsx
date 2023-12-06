@@ -34,7 +34,7 @@ const Dashboard = () => {
   });
 
   return (
-    <div className="bg-[#f2f2f2] sm:h-[30rem] xs:h-40 h-26 border-t border-r border-gray-300">
+    <div className="bg-[#f2f2f2] sm:h-[33rem] xs:h-40 h-26 border-t border-r border-gray-300">
       <div className="ml-32 mt-4">
         <div className="flex gap-40 justify-start items-center">
           <div className='flex gap-2 font-bold justify-center items-center'>
@@ -49,13 +49,17 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className='mt-6 flex flex-col'>
+        <div className='mt-8 flex flex-col'>
            <h3 className='text-black font-bold tracking-wide mb-4 text-sm'>Fitness Activity</h3>
           <BarChart chartData={chartData} />
         </div>
 
-        <div className='mt-6 flex flex-col'>
-           <h3 className='text-black font-bold tracking-wide mb-4 text-sm'>Recommended</h3>
+        <div className='mt-12 flex flex-col w-7/12'>
+           <div className='flex justify-between items-center capitalize mb-4'>
+            <h3 className='text-black font-bold tracking-wide text-sm'>recommended</h3>
+            <h3 className='text-gray-500 text-sm'>trainer</h3>
+            <h3 className='text-gray-500 text-sm'>duration</h3>
+           </div>
           <Recommended />
         </div>
       </div>
