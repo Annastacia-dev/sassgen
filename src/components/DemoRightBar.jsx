@@ -36,7 +36,7 @@ const DemoRightBar = ({
         )}
         <BsThreeDots className="text-gray-700 text-xl ml-4 absolute right-6 top-20 " />
       </div>
-      <div className="flex flex-col mt-7 p-2 absolute sm:right-10 right-0 gap-2">
+      <div className={`flex flex-col ${loggedIn ? 'mt-7' : ''} p-2 absolute sm:right-10 right-0 gap-2`}>
         {/* HeartRate */}
         <div
           className="flex flex-col justify-center bg-gradient-to-r from-primary to-primaryDark
@@ -106,8 +106,8 @@ const DemoRightBar = ({
         </div>
         {/* Data */}
         <div
-          className="flex justify-between bg-gray-100 shadow-lg
-        w-48 h-40 rounded-lg px-4 overflow-hidden"
+          className={`flex justify-between bg-gray-100 shadow-lg
+        w-48 ${loggedIn ? 'h-40' : 'h-60'} rounded-lg px-4 overflow-hidden`}
         >
           <div className='flex flex-col gap-1'>
             <div className="flex flex-col justify-center items-center bg-gray-100 px-4 w-16 h-12 mt-2 rounded-lg shadow-lg py-2 relative">
@@ -123,8 +123,13 @@ const DemoRightBar = ({
               <p className="text-xs text-gray-400">item</p>
               <div className="w-2 h-2 rounded-full absolute bg-secondary top-2 right-1"></div>
             </div>
-            <div className="flex flex-col justify-center items-center bg-gradient-to-r
-            from-primary to-primaryDark px-4 w-16 h-16 mt-2 rounded-t-lg shadow-lg py-2 relative">
+            <div className={`flex flex-col justify-center items-center bg-gradient-to-r
+            from-primary to-primaryDark px-4 w-16 ${loggedIn ? 'h-16 rounded-t-lg pt-8' : 'h-20 rounded-lg'} mt-2 shadow-lg relative text-white`}>
+              <p className="text-xs font-bold">
+                4536
+                <span className="text-xs ml-1 font-normal text-secondary">g</span>
+              </p>
+              <p className="text-xs text-gray-400">calories</p>
               <div className="w-2 h-2 rounded-full absolute bg-secondary top-2 right-2"></div>
             </div>
           </div>

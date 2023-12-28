@@ -38,7 +38,6 @@ const Demo = () => {
           </div>
         </div>
       </div>
-      <div className="mt-96 text-white">Heloo</div>
     </>
   );
 };
