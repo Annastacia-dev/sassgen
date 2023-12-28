@@ -22,7 +22,7 @@ const DemoRightBar = ({
 
   return (
     <div className="bg-[#E5E9F1] w-32 sm:h-[33rem] xs:h-40 h-28 absolute top-0 border-t border-[#F0F3F8] z-16 -right-2 p-2">
-      <div className="sm:flex flex-col hidden">
+      <div className="flex flex-col">
         {/* Profile */}
         {loggedIn && (
           <div className="flex gap-6 py-2 px-4 justify-center items-center">

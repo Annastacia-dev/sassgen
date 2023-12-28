@@ -32,7 +32,9 @@ const Demo = () => {
           <div className="bg-white sm:w-[49rem] xs:w-[19rem] w-40 sm:h-[33rem] xs:h-32 h-28 sm:-ml-6 -ml-6 sm:-mt-4 -mt-6 relative">
             <div>{renderTab()}</div>
             <DemoSideBar activeTab={activeTab} setActiveTab={setActiveTab}  loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
+            { (activeTab === 'dashboard' || activeTab === 'home') && (
             <DemoRightBar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+            )}
           </div>
         </div>
       </div>
