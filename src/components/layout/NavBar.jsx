@@ -31,6 +31,9 @@ const NavBar = () => {
             <li className="hover:text-secondary cursor-pointer">
               <a>feedback</a>
             </li>
+            <li className="hover:text-secondary cursor-pointer">
+              <a>pricing</a>
+            </li>
           </ul>
 
           <div className="flex items-center">

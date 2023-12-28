@@ -24,7 +24,7 @@ function BarChart({ chartData }) {
     <div
       className="chart-container"
       style={{
-        width: window.innerWidth < 480 ? '160px' : '400px ',
+        width: window.innerWidth < 480 ? '0px' : '400px ',
         padding: '10px',
       }}
     >
@@ -45,7 +45,7 @@ function BarChart({ chartData }) {
                   size: 11,
                 },
                 fontFamily: 'Poppins',
-              }
+              },
             },
           },
           scales: {

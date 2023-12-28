@@ -7,8 +7,9 @@ import { BiMessageRounded } from 'react-icons/bi';
 import { HiOutlineCog8Tooth } from 'react-icons/hi2';
 import { PiSignOut } from 'react-icons/pi';
 import NumberAnimation from './NumberAnimation';
+import { CiLogin } from "react-icons/ci";
 
-const DemoSideBar = ({ activeTab, setActiveTab}) => {
+const DemoSideBar = ({ activeTab, setActiveTab, loggedIn, setLoggedIn }) => {
   const typewriter = new Typewriter('#typewriter', {
     loop: true,
     delay: 100,
@@ -23,7 +24,7 @@ const DemoSideBar = ({ activeTab, setActiveTab}) => {
   ];
 
   return (
-    <div className="bg-white w-28 sm:h-[33rem] xs:h-40 h-28 absolute top-0 border-t border-gray-300 z-16">
+    <div className="bg-white w-28 sm:h-[33rem] xs:h-40 h-28 absolute top-0 border-t border-[#F0F3F8] z-16">
       <div className="bg-white sm:w-32 w-24 sm:h-32 h-24 absolute sm:-left-36 -left-8 rotate-45 sm:top-0 -top-[120px] rounded-xl shadow transition-all">
         <div className="sm:h-3 h-2 sm:w-3 w-2 rounded-full bg-secondary absolute sm:top-4 top-2 sm:left-8 left-3"></div>
         <p className="sm:text-3xl text-xl font-bold text-black absolute sm:top-12 top-10 sm:left-5 left-4 -rotate-90">
@@ -70,12 +71,15 @@ const DemoSideBar = ({ activeTab, setActiveTab}) => {
             </div>
           ))}
 
-          <div className="sm:flex justify-center items-center cursor-pointer hover:text-red-500 text-gray-500 px-2 py-1 hover:rounded-full transition-all mt-8 hidden">
-            <div className="sm:w-5 w-3 sm:h-5 h-3">
-              <PiSignOut />
+          <button className={`sm:flex justify-center items-center cursor-pointer ${loggedIn ? 'hover:text-red-500' : 'hover:text-green-500' } text-gray-500 px-2 py-1 hover:rounded-full transition-all mt-8 hidden`} onClick={() => setLoggedIn(!loggedIn)}>
+            <div className="sm:w-5 w-3 sm:h-5 h-3"
+            >
+              {loggedIn ? <PiSignOut /> : <CiLogin />}
             </div>
-            <div className="sm:text-xs text[0.6rem]  capitalize">sign out</div>
-          </div>
+            <div className="sm:text-xs text[0.6rem]  capitalize">
+              {loggedIn ? 'sign out' : 'sign in'}
+            </div>
+          </button>
         </div>
       </div>
       <div className="bg-white sm:w-32 w-24 sm:h-32 h-24 absolute sm:-left-32 sm:rotate-[100deg] rotate-[100deg] sm:top-96 top-44 rounded-xl shadow transition-all">
