@@ -10,13 +10,13 @@ const Messages = () => {
   // Working out conversation
   const randomMessages = [
     'Fun fact: The first recorded use of the word “gymnasium” was in 1598, meaning “school for gymnastics.”',
-    "Workout Tip: Don’t skip leg day!",
-    "Quote of the day: “The last three or four reps is what makes the muscle grow. This area of pain divides the champion from someone else who is not a champion.” – Arnold Schwarzenegger",
-    "Question of the day: What is your favorite workout?",
-    "Fun fact: The word “gymnasium” comes from the Greek word gymnazein, which means “to exercise naked.”",
-    "Did you know? The first modern gym was opened in 1849 by Hippolyte Triat.",
-    "Lunges are a great exercise for strengthening, sculpting and building several muscles/muscle groups, including the quadriceps (or thighs), the gluteus maximus (or buttocks) as well as the hamstrings.",
-    "Did you know? The first dumbbells were actually bells, with the clappers removed.",
+    'Workout Tip: Don’t skip leg day!',
+    'Quote of the day: “The last three or four reps is what makes the muscle grow. This area of pain divides the champion from someone else who is not a champion.” – Arnold Schwarzenegger',
+    'Question of the day: What is your favorite workout?',
+    'Fun fact: The word “gymnasium” comes from the Greek word gymnazein, which means “to exercise naked.”',
+    'Did you know? The first modern gym was opened in 1849 by Hippolyte Triat.',
+    'Lunges are a great exercise for strengthening, sculpting and building several muscles/muscle groups, including the quadriceps (or thighs), the gluteus maximus (or buttocks) as well as the hamstrings.',
+    'Did you know? The first dumbbells were actually bells, with the clappers removed.',
   ];
 
   function sendMessage() {
@@ -48,12 +48,11 @@ const Messages = () => {
     }, 1000); // Simulate delay in receiving message
   }
 
-
-
   useEffect(() => {
     // Scroll to bottom when messages change
     if (chatContainerRef.current) {
-      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+      chatContainerRef.current.scrollTop =
+        chatContainerRef.current.scrollHeight;
     }
   }, [messages]);
 
@@ -62,7 +61,11 @@ const Messages = () => {
       <div className="ml-32 mt-4 mr-4">
         <div className="m-0 p-0 flex justify-center items-center sm:h-[31rem] xs:h-40 h-26 bg-gray-200 dark:bg-gray-800 rounded-lg">
           <div className="border border-gray-300 dark:border-gray-700 sm:h-[31rem] xs:h-40 h-26 w-full rounded-lg flex flex-col overflow-hidden">
-            <div className="flex-1 overflow-y-scroll p-10" id="chatMessages" ref={chatContainerRef}>
+            <div
+              className="flex-1 overflow-y-scroll p-10"
+              id="chatMessages"
+              ref={chatContainerRef}
+            >
               {messages.map((message, index) => (
                 <div
                   key={index}

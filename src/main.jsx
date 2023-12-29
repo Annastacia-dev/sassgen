@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <DarkModeProvider>
       <UserProvider>
-       <App />
+        <App />
       </UserProvider>
     </DarkModeProvider>
   </React.StrictMode>

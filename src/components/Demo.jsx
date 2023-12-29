@@ -33,12 +33,9 @@ const Demo = () => {
           <div className="h-2 w-2 bg-gray-400 sm:top-2 top-1 sm:left-96 left-44 rounded-full absolute"></div>
           <div className="bg-white dark:bg-gray-900 sm:w-[49rem] xs:w-[19rem] w-40 sm:h-[33rem] xs:h-32 h-28 sm:-ml-6 -ml-6 sm:-mt-4 -mt-6 relative">
             <div>{renderTab()}</div>
-            <DemoSideBar
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
-            />
+            <DemoSideBar activeTab={activeTab} setActiveTab={setActiveTab} />
             {(activeTab === 'dashboard' || activeTab === 'home') && (
-              <DemoRightBar  />
+              <DemoRightBar />
             )}
           </div>
         </div>

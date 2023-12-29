@@ -20,7 +20,18 @@ const DemoRightBar = () => {
   });
 
   const { loggedIn, user } = useContext(UserContext);
-  console.log(user)
+  
+  const profilePicture = (user) => {
+    if (user.image) {
+      return user.image;
+    } else {
+      if (user.gender === 'male') {
+        return '/male.png';
+      } else if (user.gender === 'female') {
+        return '/female.png';
+      }
+    }
+  };
 
   return (
     <div className="bg-[#E5E9F1] dark:bg-gray-900 dark:text-white w-32 sm:h-[33rem] xs:h-40 h-28 absolute top-0 border-t border-[#F0F3F8] z-16 -right-2 p-2 dark:border-gray-500">
@@ -28,11 +39,9 @@ const DemoRightBar = () => {
         {/* Profile */}
         {loggedIn && (
           <div className="flex gap-6  justify-center items-center">
-            <p className="text-sm font-bold ml-2">
-              {user?.name}
-            </p>
+            <p className="text-sm font-bold ml-2">{user?.name}</p>
             <img
-              src={user?.image ?? user?.gender === 'female' ? '/female.png' : '/male.png'}
+              src={profilePicture(user)}
               alt="profile"
               className="w-12 h-12 rounded-full object-cover"
             />

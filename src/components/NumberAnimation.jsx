@@ -18,7 +18,7 @@ function NumberAnimation({ targetNumber }) {
     return () => clearInterval(interval);
   }, [currentNumber, targetNumber, duration, increment]);
 
-  return <span className='dark:text-white text-black'>{currentNumber}</span>;
+  return <span className="dark:text-white text-black">{currentNumber}</span>;
 }
 
 export default NumberAnimation;

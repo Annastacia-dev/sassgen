@@ -64,11 +64,13 @@ const Dashboard = () => {
 
           <div className="mt-8 flex flex-col w-7/12">
             <div className="flex justify-between items-center capitalize mb-4">
-              <h3 className=" font-bold tracking-wide text-sm">
-                recommended
+              <h3 className=" font-bold tracking-wide text-sm">recommended</h3>
+              <h3 className="text-gray-500 dark:text-gray-200 text-sm">
+                trainer
               </h3>
-              <h3 className="text-gray-500 dark:text-gray-200 text-sm">trainer</h3>
-              <h3 className="text-gray-500 dark:text-gray-200 text-sm">duration</h3>
+              <h3 className="text-gray-500 dark:text-gray-200 text-sm">
+                duration
+              </h3>
             </div>
             <Recommended />
           </div>

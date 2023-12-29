@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { CiSquarePlus, CiClock1, CiCalendar, CiPen
-} from 'react-icons/ci';
+import { CiSquarePlus, CiClock1, CiCalendar, CiPen } from 'react-icons/ci';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -56,7 +55,7 @@ const CreateGoal = () => {
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 dark:border-gray-600 text-white sm:h-[33rem] xs:h-40 h-26 border-t border-r border-[#F0F3F8]">
+    <div className="bg-gray-100 dark:bg-gray-900 dark:border-gray-600 dark:text-white sm:h-[33rem] xs:h-40 h-26 border-t border-r border-[#F0F3F8]">
       <div className="ml-32 mt-4">
         <ToastContainer />
         <div className="grid grid-cols-2 gap-4">
@@ -72,7 +71,10 @@ const CreateGoal = () => {
               onSubmit={onSubmit}
             >
               <div className="flex flex-col gap-2">
-                <label htmlFor="title" className="text-xs">
+                <label
+                  htmlFor="title"
+                  className="text-xs dark:text-gray-200 text-gray-500"
+                >
                   Title
                   <span className="text-red-500">*</span>
                 </label>
@@ -89,7 +91,10 @@ const CreateGoal = () => {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="description" className="text-xs text-gray-500">
+                <label
+                  htmlFor="description"
+                  className="text-xs dark:text-gray-200 text-gray-500"
+                >
                   Description
                   <span className="text-red-500">*</span>
                 </label>
@@ -107,7 +112,10 @@ const CreateGoal = () => {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="duration" className="text-xs text-gray-500">
+                <label
+                  htmlFor="duration"
+                  className="text-xs dark:text-gray-200 text-gray-500"
+                >
                   Duration
                   <span className="text-red-500">*</span>
                 </label>
@@ -124,7 +132,10 @@ const CreateGoal = () => {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="time" className="text-xs text-gray-500">
+                <label
+                  htmlFor="time"
+                  className="text-xs dark:text-gray-200 text-gray-500"
+                >
                   Time
                   <span className="text-red-500">*</span>
                 </label>
