@@ -36,28 +36,28 @@ const CreateGoal = () => {
         time: '',
       });
     } else {
-    e.preventDefault();
-    const newGoal = {
-      title: goal.title,
-      description: goal.description,
-      duration: goal.duration,
-      time: goal.time,
-    };
-    setGoals([...goals, newGoal]);
-    setGoal({
-      title: '',
-      description: '',
-      duration: '',
-      time: '',
-    });
-    toast.success('Goal created successfully');
+      e.preventDefault();
+      const newGoal = {
+        title: goal.title,
+        description: goal.description,
+        duration: goal.duration,
+        time: goal.time,
+      };
+      setGoals([...goals, newGoal]);
+      setGoal({
+        title: '',
+        description: '',
+        duration: '',
+        time: '',
+      });
+      toast.success('Goal created successfully');
     }
   };
 
   return (
     <div className="bg-gray-100 sm:h-[33rem] xs:h-40 h-26 border-t border-r border-[#F0F3F8]">
       <div className="ml-32 mt-4">
-      <ToastContainer />
+        <ToastContainer />
         <div className="grid grid-cols-2 gap-4">
           <div className="col-span-1">
             <h2 className="text-sm uppercase">create Goal</h2>
