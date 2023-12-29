@@ -5,7 +5,7 @@ const logos = [
   '/mashable.png',
   '/cnn.png',
   '/huffpost.png',
-]
+];
 
 const Partners = () => {
   return (
@@ -18,7 +18,7 @@ const Partners = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Partners
+export default Partners;

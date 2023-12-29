@@ -2,6 +2,7 @@ import { useState } from 'react';
 import DemoSideBar from './DemoSideBar';
 import Dashboard from './Dashboard';
 import DemoRightBar from './DemoRightBar';
+import CreateGoal from './CreateGoal';
 
 const Demo = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -10,11 +11,11 @@ const Demo = () => {
   const renderTab = () => {
     switch (activeTab) {
       case 'home':
-        return <Dashboard  />;
+        return <Dashboard />;
       case 'dashboard':
         return <Dashboard />;
       case 'create goal':
-        return <div className="ml-32">Create Goal</div>;
+        return <CreateGoal />;
       case 'messages':
         return <div className="ml-32">Messages</div>;
       case 'settings':
@@ -31,9 +32,14 @@ const Demo = () => {
           <div className="h-2 w-2 bg-gray-400 sm:top-2 top-1 sm:left-96 left-44 rounded-full absolute"></div>
           <div className="bg-white sm:w-[49rem] xs:w-[19rem] w-40 sm:h-[33rem] xs:h-32 h-28 sm:-ml-6 -ml-6 sm:-mt-4 -mt-6 relative">
             <div>{renderTab()}</div>
-            <DemoSideBar activeTab={activeTab} setActiveTab={setActiveTab}  loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
-            { (activeTab === 'dashboard' || activeTab === 'home') && (
-            <DemoRightBar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+            <DemoSideBar
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+              loggedIn={loggedIn}
+              setLoggedIn={setLoggedIn}
+            />
+            {(activeTab === 'dashboard' || activeTab === 'home') && (
+              <DemoRightBar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
             )}
           </div>
         </div>

@@ -8,9 +8,7 @@ import { PiWavesLight } from 'react-icons/pi';
 import { FaRunning } from 'react-icons/fa';
 import NumberAnimation from './NumberAnimation';
 
-const DemoRightBar = ({
-  loggedIn,
-}) => {
+const DemoRightBar = ({ loggedIn }) => {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -36,7 +34,11 @@ const DemoRightBar = ({
         )}
         <BsThreeDots className="text-gray-700 text-xl ml-4 absolute right-6 top-20 " />
       </div>
-      <div className={`flex flex-col ${loggedIn ? 'mt-7' : ''} p-2 absolute sm:right-10 right-0 gap-2`}>
+      <div
+        className={`flex flex-col ${
+          loggedIn ? 'mt-7' : ''
+        } p-2 absolute sm:right-10 right-0 gap-2`}
+      >
         {/* HeartRate */}
         <div
           className="flex flex-col justify-center bg-gradient-to-r from-primary to-primaryDark
@@ -109,7 +111,7 @@ const DemoRightBar = ({
           className={`flex justify-between bg-gray-100 shadow-lg
         w-48 ${loggedIn ? 'h-40' : 'h-60'} rounded-lg px-4 overflow-hidden`}
         >
-          <div className='flex flex-col gap-1'>
+          <div className="flex flex-col gap-1">
             <div className="flex flex-col justify-center items-center bg-gray-100 px-4 w-16 h-12 mt-2 rounded-lg shadow-lg py-2 relative">
               <p className="text-xs font-bold">122</p>
               <p className="text-xs text-gray-400">time</p>
@@ -118,16 +120,24 @@ const DemoRightBar = ({
             <div className="flex flex-col justify-center items-center bg-white px-4 w-16 h-16 mt-2 rounded-lg shadow-lg py-2 relative">
               <p className="text-xs font-bold">
                 12
-                <span className="text-xs text-gray-400 ml-1 font-normal">typ</span>
+                <span className="text-xs text-gray-400 ml-1 font-normal">
+                  typ
+                </span>
               </p>
               <p className="text-xs text-gray-400">item</p>
               <div className="w-2 h-2 rounded-full absolute bg-secondary top-2 right-1"></div>
             </div>
-            <div className={`flex flex-col justify-center items-center bg-gradient-to-r
-            from-primary to-primaryDark px-4 w-16 ${loggedIn ? 'h-16 rounded-t-lg pt-8' : 'h-20 rounded-lg'} mt-2 shadow-lg relative text-white`}>
+            <div
+              className={`flex flex-col justify-center items-center bg-gradient-to-r
+            from-primary to-primaryDark px-4 w-16 ${
+              loggedIn ? 'h-16 rounded-t-lg pt-8' : 'h-20 rounded-lg'
+            } mt-2 shadow-lg relative text-white`}
+            >
               <p className="text-xs font-bold">
                 4536
-                <span className="text-xs ml-1 font-normal text-secondary">g</span>
+                <span className="text-xs ml-1 font-normal text-secondary">
+                  g
+                </span>
               </p>
               <p className="text-xs text-gray-400">calories</p>
               <div className="w-2 h-2 rounded-full absolute bg-secondary top-2 right-2"></div>
@@ -139,7 +149,9 @@ const DemoRightBar = ({
             <p className="absolute top-4 left-3 text-[8px] ">time lapsed</p>
             <img src="/data.png" className="w-20" />
             <div className="absolute bottom-8 left-8 w-1 h-1 rounded-full bg-secondary"></div>
-            <p className="absolute bottom-4 left-3 text-[8px] text-primary ">data collected</p>
+            <p className="absolute bottom-4 left-3 text-[8px] text-primary ">
+              data collected
+            </p>
           </div>
         </div>
       </div>

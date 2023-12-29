@@ -7,7 +7,7 @@ import { BiMessageRounded } from 'react-icons/bi';
 import { HiOutlineCog8Tooth } from 'react-icons/hi2';
 import { PiSignOut } from 'react-icons/pi';
 import NumberAnimation from './NumberAnimation';
-import { CiLogin } from "react-icons/ci";
+import { CiLogin } from 'react-icons/ci';
 
 const DemoSideBar = ({ activeTab, setActiveTab, loggedIn, setLoggedIn }) => {
   const typewriter = new Typewriter('#typewriter', {
@@ -71,9 +71,13 @@ const DemoSideBar = ({ activeTab, setActiveTab, loggedIn, setLoggedIn }) => {
             </div>
           ))}
 
-          <button className={`sm:flex justify-center items-center cursor-pointer ${loggedIn ? 'hover:text-red-500' : 'hover:text-green-500' } text-gray-500 px-2 py-1 hover:rounded-full transition-all mt-8 hidden`} onClick={() => setLoggedIn(!loggedIn)}>
-            <div className="sm:w-5 w-3 sm:h-5 h-3"
-            >
+          <button
+            className={`sm:flex justify-center items-center cursor-pointer ${
+              loggedIn ? 'hover:text-red-500' : 'hover:text-green-500'
+            } text-gray-500 px-2 py-1 hover:rounded-full transition-all mt-8 hidden`}
+            onClick={() => setLoggedIn(!loggedIn)}
+          >
+            <div className="sm:w-5 w-3 sm:h-5 h-3">
               {loggedIn ? <PiSignOut /> : <CiLogin />}
             </div>
             <div className="sm:text-xs text[0.6rem]  capitalize">
