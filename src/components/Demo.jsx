@@ -4,6 +4,7 @@ import Dashboard from './Dashboard';
 import DemoRightBar from './DemoRightBar';
 import CreateGoal from './CreateGoal';
 import Messages from './Messages';
+import Settings from './Settings';
 
 const Demo = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -20,7 +21,7 @@ const Demo = () => {
       case 'messages':
         return <Messages />;
       case 'settings':
-        return <div className="ml-32">Settings</div>;
+        return <Settings />;
       default:
         return <Dashboard />;
     }
