@@ -9,7 +9,7 @@ import { HiOutlineCog8Tooth } from 'react-icons/hi2';
 import { PiSignOut } from 'react-icons/pi';
 import NumberAnimation from './NumberAnimation';
 import { CiLogin } from 'react-icons/ci';
-import { UserContext } from '../contexts/User';
+import { UserContext } from '../../contexts/User';
 
 const DemoSideBar = ({ activeTab, setActiveTab }) => {
   const typewriter = new Typewriter('#typewriter', {

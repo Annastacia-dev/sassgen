@@ -10,7 +10,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { useContext } from 'react';
-import { DarkModeContext } from '../contexts/Dark';
+import { DarkModeContext } from '../../contexts/Dark';
 
 ChartJS.register(
   CategoryScale,

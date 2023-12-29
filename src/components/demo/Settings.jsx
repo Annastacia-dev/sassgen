@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { DarkModeContext } from '../contexts/Dark';
+import { DarkModeContext } from '../../contexts/Dark';
 import { TbBulbFilled, TbBulbOff } from 'react-icons/tb';
-import { UserContext } from '../contexts/User';
+import { UserContext } from '../../contexts/User';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -114,7 +114,7 @@ const Settings = () => {
                 <label className="text-sm font-bold">
                   Gender
                   <span className="text-red-500">*</span>
-                  </label>
+                </label>
                 <select
                   value={user.gender}
                   className="border px-4 py-2 text-sm w-[232px] dark:text-black"

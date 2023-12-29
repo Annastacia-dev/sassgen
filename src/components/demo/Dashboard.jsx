@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 import BarChart from './BarChart';
-import { activity } from '../data/activity';
+import { activity } from '../../data/activity';
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
 import { RiSearch2Line } from 'react-icons/ri';
 import Recommended from './Recommended';

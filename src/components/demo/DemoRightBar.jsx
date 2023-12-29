@@ -7,7 +7,7 @@ import { GrSwim } from 'react-icons/gr';
 import { PiWavesLight } from 'react-icons/pi';
 import { FaRunning } from 'react-icons/fa';
 import NumberAnimation from './NumberAnimation';
-import { UserContext } from '../contexts/User';
+import { UserContext } from '../../contexts/User';
 
 const DemoRightBar = () => {
   const [active, setActive] = useState(false);
@@ -20,7 +20,7 @@ const DemoRightBar = () => {
   });
 
   const { loggedIn, user } = useContext(UserContext);
-  
+
   const profilePicture = (user) => {
     if (user.image) {
       return user.image;
