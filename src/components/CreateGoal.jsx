@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { CiSquarePlus, CiClock1, CiCalendar } from 'react-icons/ci';
+import { CiSquarePlus, CiClock1, CiCalendar, CiPen
+} from 'react-icons/ci';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -55,16 +56,19 @@ const CreateGoal = () => {
   };
 
   return (
-    <div className="bg-gray-100 sm:h-[33rem] xs:h-40 h-26 border-t border-r border-[#F0F3F8]">
+    <div className="bg-gray-100 dark:bg-gray-900 dark:border-gray-600 text-white sm:h-[33rem] xs:h-40 h-26 border-t border-r border-[#F0F3F8]">
       <div className="ml-32 mt-4">
         <ToastContainer />
         <div className="grid grid-cols-2 gap-4">
           <div className="col-span-1">
-            <h2 className="text-sm uppercase">create Goal</h2>
+            <div className="flex gap-2">
+              <CiPen />
+              <h2 className="text-sm uppercase">create Goal</h2>
+            </div>
             <hr className="border-gray-300 my-2" />
 
             <form
-              className="flex flex-col justify-center gap-4 shadow-lg p-4 rounded-lg mt-4"
+              className="flex flex-col justify-center gap-4 dark:shadow-gray-700 shadow-lg p-4 rounded-lg mt-4"
               onSubmit={onSubmit}
             >
               <div className="flex flex-col gap-2">
@@ -76,7 +80,7 @@ const CreateGoal = () => {
                   type="text"
                   name="title"
                   id="title"
-                  className="border border-black bg-transparent px-2 py-1 text-xs outline-none text-gray-700 focus:ring-transparent focus:outline-none w-56"
+                  className="border dark:border-white border-black bg-transparent px-2 py-1 text-xs outline-none dark:text-gray-200 text-gray-700 focus:ring-transparent focus:outline-none w-56"
                   placeholder="Enter title"
                   required
                   value={goal.title}
@@ -94,7 +98,7 @@ const CreateGoal = () => {
                   id="description"
                   cols="30"
                   rows="4"
-                  className="border border-black bg-transparent px-2 py-1 text-xs outline-none text-gray-700 focus:ring-transparent focus:outline-none w-56"
+                  className="border dark:border-white border-black bg-transparent px-2 py-1 text-xs outline-none dark:text-gray-200 text-gray-700 focus:ring-transparent focus:outline-none w-56"
                   placeholder="Enter description"
                   required
                   value={goal.description}
@@ -111,7 +115,7 @@ const CreateGoal = () => {
                   type="text"
                   name="duration"
                   id="duration"
-                  className="border border-black bg-transparent px-2 py-1 text-xs outline-none text-gray-700 focus:ring-transparent focus:outline-none w-56"
+                  className="border dark:border-white border-black bg-transparent px-2 py-1 text-xs outline-none dark:text-gray-200 text-gray-700 focus:ring-transparent focus:outline-none w-56"
                   placeholder="Enter duration"
                   required
                   value={goal.duration}
@@ -128,7 +132,7 @@ const CreateGoal = () => {
                   type="time"
                   name="time"
                   id="time"
-                  className="border border-black bg-transparent px-2 py-1 text-xs outline-none text-gray-700 focus:ring-transparent focus:outline-none w-56"
+                  className="border dark:border-white border-black bg-transparent px-2 py-1 text-xs outline-none dark:text-gray-200 text-gray-700 focus:ring-transparent focus:outline-none w-56"
                   placeholder="Enter time"
                   required
                   value={goal.time}
@@ -160,7 +164,7 @@ const CreateGoal = () => {
                 className={`flex flex-col gap-4 ${
                   index % 2 === 0
                     ? 'bg-gradient-to-r from-primary to-primaryDark text-white'
-                    : 'bg-white text-black'
+                    : 'bg-white dark:bg-gray-800 dark:text-white'
                 } p-4 rounded-lg mt-4 shadow-sm`}
                 key={index}
               >

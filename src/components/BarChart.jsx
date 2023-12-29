@@ -9,6 +9,8 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import { useContext } from 'react';
+import { DarkModeContext } from '../contexts/Dark';
 
 ChartJS.register(
   CategoryScale,
@@ -20,6 +22,8 @@ ChartJS.register(
 );
 
 function BarChart({ chartData }) {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <div
       className="chart-container"
@@ -40,7 +44,7 @@ function BarChart({ chartData }) {
               display: true,
               labels: {
                 usePointStyle: true,
-                color: '#000',
+                color: darkMode ? '#fff' : '#000',
                 font: {
                   size: 11,
                 },
@@ -57,6 +61,9 @@ function BarChart({ chartData }) {
             },
           },
           borderRadius: 20,
+          responsive: true,
+          maintainAspectRatio: false,
+          color: darkMode ? '#fff' : '#000',
         }}
       />
     </div>

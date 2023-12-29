@@ -22,7 +22,7 @@ const Recommended = () => {
     <div className="flex flex-col gap-1">
       {workouts.map((workout) => (
         <div
-          className="flex justify-between items-center bg-white py-2 px-2 rounded-lg"
+          className="flex justify-between items-center bg-white dark:bg-gray-800 text-white py-2 px-2 rounded-lg"
           key={workout.id}
         >
           <div className="flex gap-4">
@@ -32,19 +32,19 @@ const Recommended = () => {
               className="w-10 h-10 rounded-full"
             />
             <div className="flex flex-col justify-center items-start">
-              <h3 className="text-black font-bold tracking-wide text-xs capitalize">
+              <h3 className=" font-bold tracking-wide text-xs capitalize">
                 {workout.title}
               </h3>
             </div>
           </div>
           <div className="flex gap-10">
             <div className="flex gap-1 items-center">
-              <p className="text-gray-800 text-xs capitalize">
+              <p className="text-gray-800 dark:text-gray-200 text-xs capitalize">
                 {workout.trainer}
               </p>
             </div>
             <div className="flex gap-1 items-center">
-              <p className="text-gray-800 text-xs">{workout.duration}</p>
+              <p className="text-gray-800 dark:text-gray-200 text-xs">{workout.duration}</p>
             </div>
           </div>
         </div>

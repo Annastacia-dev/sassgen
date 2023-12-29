@@ -58,10 +58,10 @@ const Messages = () => {
   }, [messages]);
 
   return (
-    <div className="bg-[#F0F3F8] sm:h-[33rem] xs:h-40 h-26 border-t border-r border-[#F0F3F8] overflow-hidden flex flex-col">
+    <div className="bg-[#F0F3F8] dark:bg-gray-900 sm:h-[33rem] xs:h-40 h-26 border-t border-r border-[#F0F3F8] overflow-hidden flex flex-col dark:border-gray-500">
       <div className="ml-32 mt-4 mr-4">
-        <div className="m-0 p-0 flex justify-center items-center sm:h-[31rem] xs:h-40 h-26 bg-gray-200">
-          <div className="border border-gray-300 sm:h-[31rem] xs:h-40 h-26 w-full rounded-lg flex flex-col overflow-hidden">
+        <div className="m-0 p-0 flex justify-center items-center sm:h-[31rem] xs:h-40 h-26 bg-gray-200 dark:bg-gray-800 rounded-lg">
+          <div className="border border-gray-300 dark:border-gray-700 sm:h-[31rem] xs:h-40 h-26 w-full rounded-lg flex flex-col overflow-hidden">
             <div className="flex-1 overflow-y-scroll p-10" id="chatMessages" ref={chatContainerRef}>
               {messages.map((message, index) => (
                 <div
@@ -73,13 +73,13 @@ const Messages = () => {
                   <div
                     className={`${
                       message.messageType === 'sent'
-                        ? 'bg-primary text-right text-white'
-                        : 'bg-white text-left text-black'
+                        ? 'bg-primary dark:bg-secondaryDark text-right dark:text-white'
+                        : 'bg-white dark:bg-gray-600 text-left dark:text-white'
                     } rounded-sm py-2 px-6 max-w-[80%]`}
                   >
                     {message.message}
                   </div>
-                  <div className="text-xs text-gray-500 mr-2 ml-2">
+                  <div className="text-xs text-gray-500 dark:text-gray-200 mr-2 ml-2">
                     {message.sender}
                   </div>
                 </div>
@@ -91,7 +91,7 @@ const Messages = () => {
                 placeholder="Type a message..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="flex-1 p-3 border border-primary bg-transparent text-primary placeholder:text-primary focus:ring-transparent focus:outline-none"
+                className="flex-1 p-3 border border-primary dark:border-secondary dark:text-secondary bg-transparent text-primary placeholder:text-primary dark:placeholder:text-secondary focus:ring-transparent focus:outline-none"
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     sendMessage();
@@ -99,7 +99,7 @@ const Messages = () => {
                 }}
               />
               <button
-                className="px-8 py-3 bg-primary text-white border-none ml-10 cursor-pointer"
+                className="px-8 py-3 bg-primary dark:bg-secondary text-white border-none ml-10 cursor-pointer"
                 onClick={sendMessage}
               >
                 <IoIosSend className="text-2xl" />
