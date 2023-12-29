@@ -9,7 +9,7 @@ const logos = [
 
 const Partners = () => {
   return (
-    <div className="mt-96 mb-4">
+    <div className="sm:mt-96 mt-10 mb-4">
       <div className="flex justify-center items-center">
         {logos.map((logo, index) => (
           <div key={index} className="mx-6">
