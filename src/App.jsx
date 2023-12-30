@@ -3,6 +3,7 @@ import Demo from './components/demo/Demo';
 import Partners from './components/Partners';
 import Solutions from './components/Solutions';
 import Features from './components/Features';
+import Pricing from './components/Pricing';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Partners />
       <Solutions />
       <Features />
+      <Pricing />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import NavBar from './layout/NavBar';
 import Socials from './Socials';
-import bg from '../assets/bg.jpg';
+import bg from '/bg.jpg';
 
 const Header = () => {
   return (
