@@ -4,7 +4,7 @@ const Pricing = () => {
       <h6 className="uppercase text-secondaryDark text-xs font-bold tracking-widest">
         packages
       </h6>
-      <h3 className="text-2xl font-black ml-2 mt-2 tracking-wide capitalize">
+      <h3 className="sm:text-2xl text-lg font-black ml-2 mt-2 tracking-wide capitalize">
         pricing plans
       </h3>
       <div className="relative">
@@ -109,12 +109,12 @@ const Pricing = () => {
             </div>
           </div>
         </div>
-        <div className="mt-20 bg-gradient-to-r from-primary to-primaryDark rounded-lg w-full shadow-lg text-white relative p-16">
-          <div className="flex justify-between items-center">
-            <p className="font-bold w-1/2 text-2xl leading-10">
+        <div className="mt-20 bg-gradient-to-r from-primary to-primaryDark rounded-lg sm:w-full w-10/12 sm:ml-0 ml-6 shadow-lg text-white relative p-16">
+          <div className="flex sm:flex-row flex-col justify-between items-center">
+            <p className="font-bold sm:w-1/2  sm:text-2xl text-lg sm:leading-10 leading-7">
               10,000+ Professionals are recommending SASS product
             </p>
-            <div className="flex gap-4">
+            <div className="flex sm:flex-row flex-col gap-4 sm:mt-0 mt-10">
               <button className="bg-gradient-to-r from-secondaryDark to-secondary text-white capitalize  px-6 py-4 rounded-full text-xs font-bold mt-2 cursor-pointer hover:bg-gradient-to-r hover:text-white hover:from-secondary hover:to-secondaryDark">
                 get started now
               </button>

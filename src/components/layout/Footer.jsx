@@ -5,8 +5,8 @@ import americanExpress from '/american-express.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-primaryDark relative flex flex-col justify-center items-center py-16 text-white rounded-t-3xl mt-20">
-      <div className="grid sm:grid-cols-5 grid-cols-1 gap-32">
+    <footer className="bg-primaryDark relative flex flex-col justify-center items-center sm:py-16 py-8 text-white rounded-t-3xl mt-20">
+      <div className="grid sm:grid-cols-5 grid-cols-2 sm:gap-32 gap-12">
         <div className="flex flex-col justify-center items-start col-span-1">
           <h1 className="text-sm font-bold uppercase tracking-wider">
             service
@@ -99,8 +99,8 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <hr className="w-3/4 my-16 border-gray-400" />
-      <div className="flex flex-col md:flex-row justify-between items-center w-3/4">
+      <hr className="w-3/4 sm:my-16 my-8 border-gray-400" />
+      <div className="flex flex-col md:flex-row justify-between items-center w-3/4 sm:gap-0 gap-10">
         <div className="flex gap-1 justify-center items-center">
           <img src={logo} alt="logo" className="w-6" />
           <p className="text-sm font-bold tracking-wider">SassPack</p>

@@ -48,10 +48,10 @@ const Solutions = () => {
       <h6 className="uppercase text-secondaryDark text-xs font-bold tracking-widest">
         features
       </h6>
-      <h3 className="text-2xl font-black ml-2 mt-2 tracking-wide">
+      <h3 className="sm:text-2xl text-lg font-black ml-2 mt-2 tracking-wide">
         Our Solutions
       </h3>
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10 px-24">
+      <div className="flex flex-col sm:flex-row justify-center items-center sm:gap-4 gap-20 mt-10 px-24">
         {solutions.map((solution) => (
           <div
             key={solution.id}
@@ -63,7 +63,7 @@ const Solutions = () => {
             <h4 className="text-sm font-bold mt-4 capitalize">
               {solution.title}
             </h4>
-            <p className="text-center px-4 mt-2 text-gray-700 text-sm capitalize">
+            <p className=" px-4 mt-2 text-gray-700 sm:text-sm text-xs capitalize sm:text-center text-left">
               {solution.content}
             </p>
           </div>

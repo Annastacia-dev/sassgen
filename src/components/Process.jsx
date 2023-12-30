@@ -28,15 +28,15 @@ const Process = () => {
       <h6 className="uppercase text-secondaryDark text-xs font-bold tracking-widest">
         process
       </h6>
-      <h3 className="text-2xl font-black ml-2 mt-2 tracking-wide capitalize">
+      <h3 className="sm:text-2xl text-lg font-black ml-2 mt-2 tracking-wide capitalize">
         how it works
       </h3>
-      <p className="text-center text-gray-500 text-[13px] mt-2 w-5/12">
+      <p className="text-center text-gray-500 text-[13px] mt-2 sm:w-5/12 w-10/12 leading-7">
         At Surge3 we know knowledge is power and experience leads to results.
         There are not many cities that have experienced such social and
         political extremes.
       </p>
-      <div className="flex flex-col md:flex-row justify-center items-center mt-12 px-16">
+      <div className="flex flex-col md:flex-row justify-center items-center mt-12 px-16 sm:gap-0 gap-10">
         {processes.map((process) => (
           <div
             key={process.number}
@@ -55,7 +55,7 @@ const Process = () => {
             <h6 className="text-sm font-bold mt-8 capitalize">
               {process.title}
             </h6>
-            <p className="text-gray-500 text-[11px] text-left mt-4 w-7/12 ml-12">
+            <p className="text-gray-500 text-[11px] text-left mt-4 w-7/12 sm:ml-12">
               {process.content}
             </p>
           </div>
