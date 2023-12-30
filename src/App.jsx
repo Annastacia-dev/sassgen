@@ -4,6 +4,8 @@ import Partners from './components/Partners';
 import Solutions from './components/Solutions';
 import Features from './components/Features';
 import Pricing from './components/Pricing';
+import Process from './components/layout/Process';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Solutions />
       <Features />
       <Pricing />
+      <Process />
+      <Footer />
     </>
   );
 }
